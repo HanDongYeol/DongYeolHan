@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.first">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CStory"></activity>
+        <activity android:name=".CHome"></activity>
+        <activity android:name=".CEmotion"></activity>
+        <activity android:name=".CSetting"></activity>
+        <activity android:name=".CHappy"></activity>
+        <activity android:name=".CSad"></activity>
+        <activity android:name=".CAnger"></activity>
+        <activity android:name=".CDisGust"></activity>
+        <activity android:name=".CPanic"></activity>
+    </application>
+
+</manifest>
