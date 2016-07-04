@@ -1,4 +1,4 @@
-package com.example.user.first;
+package com.example.user.first.Story;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TabHost;
+
+import com.example.user.first.R;
 
 /**
  * Created by USER on 2016-06-26.
@@ -34,6 +36,10 @@ public class CStory extends AppCompatActivity {
 
         TabHost tabHost = (TabHost)findViewById(R.id.tabHost);
         tabHost.setup();
+
+        TabHost.TabSpec tabSpecAll = tabHost.newTabSpec("ALL").setIndicator("전체");
+        tabSpecAll.setContent(R.id.all);
+        tabHost.addTab(tabSpecAll);
 
         TabHost.TabSpec tabSpecInner = tabHost.newTabSpec("INNER").setIndicator("내적");
         tabSpecInner.setContent(R.id.inner);

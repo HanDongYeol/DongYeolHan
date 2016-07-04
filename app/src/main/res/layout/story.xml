@@ -45,6 +45,12 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/all"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
                     android:id="@+id/inner"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

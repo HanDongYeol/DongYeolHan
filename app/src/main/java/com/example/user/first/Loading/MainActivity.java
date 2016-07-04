@@ -1,4 +1,4 @@
-package com.example.user.first;
+package com.example.user.first.Loading;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.example.user.first.Home.CHome;
+import com.example.user.first.R;
 
 public class MainActivity extends AppCompatActivity {
 

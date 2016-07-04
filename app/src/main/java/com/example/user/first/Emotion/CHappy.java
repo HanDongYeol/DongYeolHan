@@ -1,10 +1,12 @@
-package com.example.user.first;
+package com.example.user.first.Emotion;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.example.user.first.R;
 
 /**
  * Created by USER on 2016-06-26.

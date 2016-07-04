@@ -1,4 +1,4 @@
-package com.example.user.first;
+package com.example.user.first.Home;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,22 +8,27 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.example.user.first.Emotion.CEmotion;
+import com.example.user.first.Setting.CSetting;
+import com.example.user.first.R;
+import com.example.user.first.Story.CStory;
+
 /**
  * Created by USER on 2016-06-26.
  */
-public class CSetting extends AppCompatActivity {
+public class CHome extends AppCompatActivity {
 
-    TextView btnWording,btnQnA,btnTutorial,btnCreate,btn5;
+    TextView btnStory,btnEmotion,btnSetting,btn4,btn5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.setting);
+        setContentView(R.layout.home);
 
-        btnWording = (TextView)findViewById(R.id.wording);
-        btnQnA = (TextView)findViewById(R.id.QnA);
-        btnTutorial = (TextView)findViewById(R.id.tutorial);
-        btnCreate = (TextView)findViewById(R.id.create);
+        btnStory = (TextView)findViewById(R.id.storybook);
+        btnEmotion = (TextView)findViewById(R.id.emotion);
+        btnSetting = (TextView)findViewById(R.id.setting);
+        btn4 = (TextView)findViewById(R.id.btn4);
         btn5 = (TextView)findViewById(R.id.btn5);
 
         //타이틀 삭제 시작
@@ -37,7 +42,9 @@ public class CSetting extends AppCompatActivity {
         actionBar.hide();
         //타이틀 삭제 끝
 
-        btnWording.setOnClickListener(new View.OnClickListener() {
+
+
+        btnStory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CStory.class);
@@ -45,33 +52,30 @@ public class CSetting extends AppCompatActivity {
             }
         });
 
-        btnQnA.setOnClickListener(new View.OnClickListener() {
+        btnEmotion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CStory.class);
+                Intent intent = new Intent(getApplicationContext(), CEmotion.class);
                 startActivity(intent);
             }
         });
 
-        btnTutorial.setOnClickListener(new View.OnClickListener() {
+        btnSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CStory.class);
+                Intent intent = new Intent(getApplicationContext(), CSetting.class);
                 startActivity(intent);
             }
         });
-
-        btnCreate.setOnClickListener(new View.OnClickListener() {
+        btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
             }
         });
-
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
             }
         });
-
     }
 }
