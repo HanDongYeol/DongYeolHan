@@ -51,6 +51,9 @@ public class CStory_List extends BaseAdapter
         TextView titleTextView = (TextView) convertView.findViewById(R.id.titleText) ;
         TextView descTextView = (TextView) convertView.findViewById(R.id.exText) ;
 
+        /* TODO */
+
+
         // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
         CStory_Data listViewItem = listViewItemList.get(position);
 
@@ -81,10 +84,10 @@ public class CStory_List extends BaseAdapter
         item.Set_m_thumbnail(icon);
         item.Set_m_title(title);
         item.Set_m_ex(desc);
+        /* TODO */
 
         listViewItemList.add(item);
     }
-
     /* TODO */
 
 }
