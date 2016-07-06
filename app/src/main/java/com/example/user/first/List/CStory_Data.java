@@ -10,6 +10,15 @@ public class CStory_Data
     private Drawable m_thumbnail;
     private String m_title;
     private String m_ex;
+    private String m_url;
+
+    CStory_Data(Drawable thumbnail, String title, String ex, String url)
+    {
+        this.m_thumbnail = thumbnail;
+        this.m_title = title;
+        this.m_ex = ex;
+        this.m_url = url;
+    }
 
     public Drawable Get_m_thumbnail()
     {
@@ -36,5 +45,14 @@ public class CStory_Data
     public void Set_m_ex(String m_ex)
     {
         this.m_ex = m_ex;
+    }
+
+    public String Get_m_url()
+    {
+        return this.m_url;
+    }
+    public void Set_m_url(String m_url)
+    {
+        this.m_url = m_url;
     }
 }
