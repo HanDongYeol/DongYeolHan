@@ -3,21 +3,31 @@ package com.example.user.first.Story;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.app.TabActivity;
+import android.database.DataSetObserver;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.ScrollView;
+import android.widget.SimpleAdapter;
 import android.widget.TabHost;
 
 import com.example.user.first.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by USER on 2016-06-26.
  */
 @SuppressWarnings("deprecation")
 public class CStory extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +44,7 @@ public class CStory extends AppCompatActivity {
         actionBar.hide();
         //타이틀 삭제 끝
 
+        /**/
         TabHost tabHost = (TabHost)findViewById(R.id.tabHost);
         tabHost.setup();
 
@@ -48,5 +59,7 @@ public class CStory extends AppCompatActivity {
         TabHost.TabSpec tabSpecExternal = tabHost.newTabSpec("EXTERNAL").setIndicator("외적");
         tabSpecExternal.setContent(R.id.external);
         tabHost.addTab(tabSpecExternal);
+
+
     }
 }

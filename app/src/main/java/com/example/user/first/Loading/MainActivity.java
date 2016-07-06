@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
         //타이틀 삭제 시작
         Window win = getWindow();
         win.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -30,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         //타이틀 삭제 끝
+        setContentView(R.layout.activity_main);
 
         TView = (TextView)findViewById(R.id.loading);
 

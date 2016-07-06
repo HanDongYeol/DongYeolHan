@@ -21,14 +21,6 @@ public class CSetting extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.setting);
-
-        btnWording = (TextView)findViewById(R.id.wording);
-        btnQnA = (TextView)findViewById(R.id.QnA);
-        btnTutorial = (TextView)findViewById(R.id.tutorial);
-        btnCreate = (TextView)findViewById(R.id.create);
-        btn5 = (TextView)findViewById(R.id.btn5);
-
         //타이틀 삭제 시작
         Window win = getWindow();
         win.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -39,6 +31,15 @@ public class CSetting extends AppCompatActivity {
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         //타이틀 삭제 끝
+        setContentView(R.layout.setting);
+
+        btnWording = (TextView)findViewById(R.id.wording);
+        btnQnA = (TextView)findViewById(R.id.QnA);
+        btnTutorial = (TextView)findViewById(R.id.tutorial);
+        btnCreate = (TextView)findViewById(R.id.create);
+        btn5 = (TextView)findViewById(R.id.btn5);
+
+
 
         btnWording.setOnClickListener(new View.OnClickListener() {
             @Override
