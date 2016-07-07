@@ -20,7 +20,7 @@ import com.example.user.first.R;
  */
 public class CStory_Layout extends AppCompatActivity {
 
-    Button btnMeStory, btnAll, btnInner, btnEx;
+    Button btnMeStory, btnAll, btnInner, btnEx, btnTop;
     ScrollView scrollView;
 
     public ListView listView;
@@ -55,6 +55,8 @@ public class CStory_Layout extends AppCompatActivity {
 
         adapter = new CStory_List();
 
+        scrollView = (ScrollView)findViewById(R.id.scrView);
+
         listView = (ListView)findViewById(R.id.listView);
         listView.setAdapter(adapter);
 
@@ -86,10 +88,67 @@ public class CStory_Layout extends AppCompatActivity {
         btnAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for(int i = 0 ; i < adapter.getCount() ; i++)
-                {
+                adapter.setClear();
+                adapter.notifyDataSetChanged();
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "구름아 내마음을 말해줘", "▶ 감정은 무엇일까?", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "내적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "까만구름, 하얀구름", "▶ 우울한 마음", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "내적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "나도 공주!", "▶ 질투", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "내적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "또륵, 또르륵 사탕", "▶ 눈물은 언제 나는 걸까?", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "내적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "세모야! 굴러봐!", "▶ 미운마음, 미운 친구", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "내적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "어두운 밤", "▶ 두려움", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "내적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "콩닥, 철썩 파도", "▶ 심장은 왜 뛰는 걸까?", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "내적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "내 등에 풍선이?! 어떻게 해요?", "▶ 폭력", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "띵똥땡똥, 띵똥땡똥", "▶ 가족관계", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "리본 마을", "▶ 소리지르기", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "마음의 스케치북", "▶ 부정적인 언어 사용", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "별콩이와 달콩이", "▶ 친구관계", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "손가락 사탕", "▶ 손톱 물어뜯기", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "야금야금 우걱우걱", "▶ 간식의 남용", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "폭폭이의 달리기", "▶ 떼 쓰기", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                listView.smoothScrollToPosition(0);
+            }
+        });
 
-                }
+        btnInner = (Button)findViewById(R.id.btnInner);
+        btnInner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                adapter.setClear();
+                adapter.notifyDataSetChanged();
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "구름아 내마음을 말해줘", "▶ 감정은 무엇일까?", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "내적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "까만구름, 하얀구름", "▶ 우울한 마음", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "내적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "나도 공주!", "▶ 질투", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "내적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "또륵, 또르륵 사탕", "▶ 눈물은 언제 나는 걸까?", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "내적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "세모야! 굴러봐!", "▶ 미운마음, 미운 친구", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "내적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "어두운 밤", "▶ 두려움", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "내적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "콩닥, 철썩 파도", "▶ 심장은 왜 뛰는 걸까?", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "내적");
+                listView.smoothScrollToPosition(0);
+            }
+        });
+
+        btnEx = (Button)findViewById(R.id.btnEx);
+        btnEx.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                adapter.setClear();
+                adapter.notifyDataSetChanged();
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "내 등에 풍선이?! 어떻게 해요?", "▶ 폭력", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "띵똥땡똥, 띵똥땡똥", "▶ 가족관계", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "리본 마을", "▶ 소리지르기", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "마음의 스케치북", "▶ 부정적인 언어 사용", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "별콩이와 달콩이", "▶ 친구관계", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "손가락 사탕", "▶ 손톱 물어뜯기", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "야금야금 우걱우걱", "▶ 간식의 남용", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                adapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.flower), "폭폭이의 달리기", "▶ 떼 쓰기", "https://www.youtube.com/watch?v=i1jSCpo1Vq0", "외적");
+                listView.smoothScrollToPosition(0);
+            }
+        });
+
+        btnTop = (Button)findViewById(R.id.btnTop);
+        btnTop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listView.smoothScrollToPosition(0);
             }
         });
     }

@@ -84,6 +84,11 @@ public class CStory_List extends BaseAdapter
         return listViewItemList.get(position) ;
     }
 
+    public void setClear()
+    {
+        listViewItemList.clear();
+    }
+
     // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
     public void addItem(Drawable icon, String title, String desc, String url, String type)
     {

@@ -73,7 +73,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/scrollView"
+            android:id="@+id/scrView"
             android:fillViewport="true"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1">
@@ -83,6 +83,15 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/listView" />
         </ScrollView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↑"
+            android:id="@+id/btnTop"
+            android:layout_gravity="right|bottom"
+            android:textSize="25dp" />
+
     </FrameLayout>
 
 </LinearLayout>
