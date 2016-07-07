@@ -55,6 +55,8 @@ public class CListViewAdapter extends BaseAdapter
         TextView descTextView = (TextView) convertView.findViewById(R.id.exText) ;
 
         /* TODO */
+        titleTextView.setSelected(true);
+        descTextView.setSelected(true);
 
 
         // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득

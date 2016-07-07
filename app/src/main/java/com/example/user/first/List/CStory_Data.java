@@ -12,7 +12,12 @@ public class CStory_Data
     private String m_ex;
     private String m_url;
 
-    CStory_Data(Drawable thumbnail, String title, String ex, String url)
+    public CStory_Data()
+    {
+
+    }
+
+    public CStory_Data(Drawable thumbnail, String title, String ex, String url)
     {
         this.m_thumbnail = thumbnail;
         this.m_title = title;
